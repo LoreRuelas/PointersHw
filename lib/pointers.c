@@ -82,5 +82,5 @@ int calulate_frequency(int *collection, int count, int target)
         }
         *ptr_to_num++;
     }
-  return 0;
+  return reps;
 }
