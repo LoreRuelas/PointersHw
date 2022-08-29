@@ -8,6 +8,7 @@
 int bubble_sort(int *collection, int count)
 {
     int swap = 0;
+    int swap_reps = 0;
     int *prt_a_swap = &swap;
 
 
@@ -20,12 +21,13 @@ int bubble_sort(int *collection, int count)
                 *prt_a_swap = *ptrBase;
                 *ptrBase = *ptrNext;
                 *ptrNext = *prt_a_swap;
+                swap_reps++;
             }
             *ptrBase++;
             *ptrNext++;
         }
     }
-  return 0;
+  return swap_reps;
 }
 
 void insertion_sort(int *collection, int count)
